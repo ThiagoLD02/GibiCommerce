@@ -9,7 +9,7 @@ export function HomePage() {
     <div className="flex bg-slate-200 w-screen h-screen gap-72 ">
       <LeftSideBar />
       <Routes>
-        <Route path="/" Component={Items} />
+        <Route path="*" Component={Items} />
         <Route path="/product" Component={Product} />
       </Routes>
       <BagSideBar />
