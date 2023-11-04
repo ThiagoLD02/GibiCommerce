@@ -7,7 +7,7 @@ import { TransparentLogo } from "../assets/transparentLogo.tsx";
 
 export function LeftSideBar() {
   return (
-    <main className="bg-white h-[calc(100%-32px)] w-[72px] my-[16px] ml-[16px] p-2 grid grid-cols-1 grid-rows-1  justify-between rounded-lg">
+    <main className="bg-white h-full w-[72px] max-h-[calc(100vh-32px)] p-2 grid grid-cols-1 grid-rows-1  justify-between rounded-lg sticky left-[16px] top-[16px]">
       <div className="flex flex-col items-center gap-8">
         <SideBarIcon link="" icon={<TransparentLogo />} isSelected={false} />
         <SideBarIcon link="" icon={<Options />} isSelected={false} />

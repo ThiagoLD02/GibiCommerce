@@ -1,7 +1,7 @@
 import { md5 } from "js-md5";
 import { api } from "../axios";
 
-export async function GetRequest(endpoint: string) {
+export async function GetRequest(endpoint: string, offset: number = 4) {
   const publicKey = process.env.publickey;
   const privateKey = process.env.privatekey;
   const timestamp = new Date().getTime().toString();
@@ -10,8 +10,7 @@ export async function GetRequest(endpoint: string) {
     ? md5(timestamp + privateKey + publicKey)
     : "";
 
-  const url = `${endpoint}?ts=${timestamp}&apikey=${publicKey}&hash=${privateKeyEncrypted}`;
-  //            comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150
+  const url = `${endpoint}?ts=${timestamp}&apikey=${publicKey}&hash=${privateKeyEncrypted}&hasDigitalIssue=true&limit=24&offset=${offset}`;
 
   try {
     const { data } = await api.get(url);

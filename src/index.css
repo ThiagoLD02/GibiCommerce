@@ -5,4 +5,11 @@
 :root {
   --color-dark: #1a1f16;
   --color-danger: #e5252c;
+  --color-success: #02d693;
+}
+
+html,
+body,
+#root {
+  height: 100%;
 }

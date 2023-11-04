@@ -1,3 +1,3 @@
 export function BagSideBar() {
-  return <>Bag Side bar</>;
+  return <div>Bag Side bar</div>;
 }
